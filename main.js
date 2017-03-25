@@ -14,6 +14,11 @@ app.command('sukgoi', (ctx) => {
   ctx.reply('슥고이!!')
 })
 
+app.command('test', (ctx) => {
+  console.log('test', ctx.from)
+  ctx.reply(ctx.from.first_name + '은(는) 바보같은 프렌즈구나')
+})
+
  
 app.hears('hi', (ctx) => ctx.reply(ctx.from.first_name))
  
