@@ -9,6 +9,11 @@ app.command('tanosi', (ctx) => {
   ctx.reply('와이~ 타노시이!')
 })
 
+app.command('tanosi@kemonoBot', (ctx) => {
+  console.log('tanosi', ctx.from)
+  ctx.reply('와이~ 타노시이!s')
+})
+
 app.command('sukgoi', (ctx) => {
   console.log('sukgoi', ctx.from)
   ctx.reply('슥고이!!')
