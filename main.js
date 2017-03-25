@@ -1,6 +1,6 @@
 const Telegraf = require('telegraf')
-const readline = require('readline'); 
-const r = readline.createInterface({ input:process.stdin, output:process.stdout });
+const readline = require('readline')
+const r = readline.createInterface({ input:process.stdin, output:process.stdout })
 
 const app = new Telegraf("365502316:AAHrAhpajKXA_Wf2ChVSuflpCKTojPqqd3w")
  
@@ -43,16 +43,20 @@ app.hears('안녕' in , (ctx) => {
  
 app.on('sticker', (ctx) => ctx.reply('👍'))
 
-r.setPrompt('> '); r.prompt(); 
-r.on('line', function(line){ 
-	if (line == 'exit') { 
-		r.close(); 
-	} 
-	console.log(line); 
+app.on((ctx) => {
+	r.setPrompt('> ')
 	r.prompt() 
-}); 
-r.on('close', function() { 
-	process.exit(); 
-});
+	app.on()
+	r.on('line', function(line){ 
+	if (line == 'exit') { 
+		r.close()
+	} 
+	console.log(line) 
+	r.prompt() 
+	})
+	r.on('close', function() { 
+		process.exit()
+	})
+})
 
 app.startPolling()
