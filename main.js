@@ -2,7 +2,7 @@ const Telegraf = require('telegraf')
  
 const app = new Telegraf("365502316:AAHrAhpajKXA_Wf2ChVSuflpCKTojPqqd3w")
  
-
+console.log(" Welcome to kemonoBot ")
 // 기본적인 커맨드
 app.command('tanosi', (ctx) => {
   console.log('tanosi', ctx.from)
@@ -33,6 +33,6 @@ app.command('sukgoi@kemonoBot', (ctx) => {
  
 app.hears('hi', (ctx) => ctx.reply(ctx.from.first_name))
  
-app.on('sticker', (ctx) => ctx.reply('👍'))
- 
+//app.on('sticker', (ctx) => ctx.reply('👍'))
+app.on('sticker', (ctx) => ctx.replyWithPhoto({ source: 'https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' })
 app.startPolling()
