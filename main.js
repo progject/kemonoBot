@@ -15,7 +15,7 @@ app.command('sukgoi', (ctx) => {
 })
 
  
-app.hears('hi', (ctx) => ctx.reply('Hey there!'))
+app.hears('hi', (ctx) => ctx.reply(ctx.from))
  
 app.on('sticker', (ctx) => ctx.reply('👍'))
  
