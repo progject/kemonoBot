@@ -31,8 +31,8 @@ app.command('sukgoi@kemonoBot', (ctx) => {
 })
 
  
-app.hears('hi', (ctx) => ctx.reply(ctx.from.first_name))
+app.hears('안녕', (ctx) => ctx.reply('안녕' + ctx.from.first_name + '프렌즈야'))
  
 //app.on('sticker', (ctx) => ctx.reply('👍'))
-app.on('sticker', (ctx) => ctx.replyWithPhoto({ source: 'https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' })
+app.on('sticker', (ctx) => ctx.replyWithPhoto('https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png')
 app.startPolling()
