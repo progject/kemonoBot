@@ -7,17 +7,17 @@ const app = new Telegraf("365502316:AAHrAhpajKXA_Wf2ChVSuflpCKTojPqqd3w")
 console.log(" Welcome to kemonoBot ")
 
 // 기본적인 커맨드
-app.command('타노시', (ctx) => {
+app.command('tanosi', (ctx) => {
   	console.log('tanosi', ctx.from)
   	ctx.reply('와이~ 타노시이!')
 })
 
-app.command('슥고이', (ctx) => {
+app.command('sukgoi', (ctx) => {
   	console.log('sukgoi', ctx.from)
   	ctx.reply('슥고이!!')
 })
 
-app.command('테스트', (ctx) => {
+app.command('test', (ctx) => {
   	console.log('test', ctx.from)
   	ctx.reply(ctx.from.first_name + '은(는) 바보같은 프렌즈구나')
 })
@@ -31,6 +31,10 @@ app.command('tanosi@kemonoBot', (ctx) => {
 app.command('sukgoi@kemonoBot', (ctx) => {
 	console.log('sukgois', ctx.from)
   	ctx.reply('슥고이!!')
+})
+
+app.action('Dr Pepper', (ctx, next) => {
+  return ctx.reply('👍').then(next)
 })
 
  
