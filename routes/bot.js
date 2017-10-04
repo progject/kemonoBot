@@ -6,12 +6,11 @@ router.get('/', function(req, res) {
     res.send('Hello World!');
 });
 
-router.get('/keyboard', function (req, res) {
-  res.send(
-        { "type" : "text",
-        }
-      );
-});
+router.get('/keyboard', (req, res) => {
+  const menu = {
+      type: 'buttons',
+      buttons: ["메뉴1", "메뉴2", "메뉴3"]
+  };
 
 router.post('/message', function(req, res){
   const user = {
